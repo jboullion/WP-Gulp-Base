@@ -1,0 +1,438 @@
+/**
+ * HOME PAGE
+ */
+#home-page 						{
+
+	#featured 					{ padding-top: 65vh; height: 100vh;
+		.inside-shadow 			{ background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0.9) 100%); box-shadow: inset 0px 0px 200px 100px rgba(0, 0, 0, 0.5); position: absolute; width: 100%; top: 0; bottom: 0; }
+		h1 						{ margin-bottom: 10px; }
+		h6 						{ color: $white; margin: 0; 
+			a 					{ color: $white; text-decoration: underline; 
+				&.visited 		{ color: $white; }
+			}
+		}
+
+		a.btn 					{ margin: 0; }
+
+		.featured-title 		{ position: absolute; width: 100%; padding: 0 100px; left: 0; bottom: 200px; text-align: left; }
+
+		@media (max-width: $screen-sm-max) { height: 90vh;
+			.featured-title 		{ padding: 0 15px; bottom: 80px; }
+		}
+	}
+
+	#recent 					{ padding: 0 100px; position: relative;
+		.recent-container 		{ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); display: flex; width: 100%; position: relative; top: -100px;
+			.goto-blog 			{ background-color: #6b613d; border-radius: 50%; height: 100px;
+				width: 100px; position: absolute; right: -45px; top: 60%; margin-top: -50px; text-align: right; padding-top: 35px; padding-right: 20px; 
+				i 				{ color: $white; font-size: 2.4rem; }
+			}
+		}
+
+		.recent 				{ background-color: $white; border: 1px solid $light-gray; padding: 15px; width: 33.333%; position: relative; z-index: 10;
+			&:hover 			{  }
+			
+			a 					{ text-decoration: none; }
+	
+			.recent-img 		{ background-color: $dark-blue; padding-top: 50%; width: 100%; margin-bottom: 20px;
+				&.is-default 	{ background-size: contain; border-left: 10px solid $dark-blue; border-right: 10px solid $dark-blue; }
+			}
+	
+			.recent-content 	{
+				h3 				{ color: $gold; font-size: 3rem; }
+				h6.date 		{ margin: 0;
+					span 		{ color: $red; }
+				}
+			}
+		}
+
+		a.more-posts 			{ display: block; margin: 0 auto; width: 270px; }
+
+		@media (min-width: $screen-lg-min) { 
+			a.more-posts 		{ display: none; }
+		}
+
+		@media (max-width: $screen-md-max) { 
+			.recent-container 		{ box-shadow: none; display: block; 
+				.goto-blog 			{ display: none; }
+			}
+
+			.recent 				{ margin-bottom: 20px; width: 100%; }
+		}
+
+		@media (max-width: $screen-sm-max) { padding: 0 15px; 
+			.recent-container 		{ top: -20px; padding-bottom: 80px; }
+		}
+	}
+
+	#about 						{
+		.container 				{ padding-top: 0; }
+
+		.img-wrap 				{ position: relative;
+			img.headshot 		{ border-radius: 50%; }
+			img.badge 			{ position: absolute; right: 0; bottom: 0; }
+		}
+	
+		a.btn 					{ margin-right: 15px; width: 270px; }
+
+		@media (max-width: $screen-md-max) { 
+			.img-wrap 				{ 
+				img.headshot 		{ margin-bottom: 40px; }
+				img.badge 			{ right: 10%; bottom: 10%; }
+			}
+
+			a.btn 					{ display: block; margin: 20px auto; }
+		}
+	}
+
+	#map 						{ text-align: center;
+		.overlay 				{ @include pkoverlay(); position: absolute; top: 0; bottom: 0; right: 0; left: 0; }
+
+		.container 				{ position: relative; padding: 50px 15px; }
+
+		h2 						{ color: $white; margin: 0; }
+		p 						{ color: $white; }
+
+		.left,
+		.right 					{ display: inline-block; vertical-align: middle; }
+
+		.left 					{ margin-right: 40px; }
+		.right 					{  }
+
+		@media (max-width: $screen-md-max) { 
+			.left,
+			.right 				{ display: block;width: 100%; }
+
+			.left 				{ margin-right: 0; margin-bottom: 50px; }
+		}
+		
+	}
+
+	#callouts 					{
+		.left,
+		.right 					{ padding: 80px; text-align: center; }
+
+		.left 					{  }
+
+		.right 					{  }
+
+		@media (max-width: $screen-lg-max) { 
+			.left,
+			.right 				{ padding: 40px; }
+		}
+	}
+
+	#trip-planning 				{ 
+		.content 				{ padding-right: 45px; }
+
+		#trip-menu 				{ 
+			ul 					{ padding: 0;
+				li 				{ border: 1px solid $light-gray; list-style: none; background-color: $white; padding: 30px 50px;
+					h3 			{ margin: 0; line-height: 1;
+						i 		{ font-size: 3rem; margin-right: 20px; }
+						a 		{ color: $gold; text-decoration: none; }
+					}
+				}
+
+				@media (max-width: $screen-lg-max) { 
+					li 			{ padding: 30px;
+						h3 		{ font-size: 3.5rem; }
+					}
+				}
+
+				@media (max-width: $screen-md-max) { margin-top: 40px; }
+
+				@media (max-width: $screen-sm-max) { 
+					li 			{ 
+						h3 		{ font-size: 3rem; }
+					}
+				}
+			}
+			
+		}
+	}
+
+	#instagram 					{
+		h3 						{
+			a 					{ color: $dark-blue; float: right; font-size: 2.5rem; font-style: italic; line-height: 6rem; text-decoration: none; }
+		}
+
+		@media (max-width: $screen-sm-max) { 
+			h3 					{
+				a 				{ float: none; display: block; }
+			}
+		}
+	}
+}
+
+/**
+ * DEFAULT PAGES
+ */
+ #default-page 					{ 
+	 .extra-right-padding 		{ padding-right: 30px; }
+
+	 .sidebar 					{ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); 
+		 .sidebar-title 		{ background-color: $dark-blue; padding: 30px;
+			 h3 				{ color: $white; margin: 0; }
+		 }
+		 .sidebar-content 		{ 
+			 .section 			{ border-bottom: 1px solid $light-gray; padding: 30px; }
+		 }
+	 }
+
+	.gform_wrapper 				{
+		 .gfield_label,
+		 label 					{ display: block; max-width: none; width: 100%; }
+	}
+
+	.gform_footer 				{ padding: 0;
+		button 					{ width: 270px; }
+	}
+ }
+
+/**
+ * CONTACT PAGE
+ */
+#contact-page 					{ 
+	.gform_wrapper 				{ 
+		#field_3_5 				{ padding: 0;
+			.ginput_container 	{ height: 1px; }
+		}
+
+		.gform_footer 			{ padding: 0; }
+	}
+
+	.headshot 					{ text-align: center;
+		img 					{ border-radius: 50%; width: 270px; }
+		a.btn 					{ padding: 20px; width: 100%; max-width: 270px; }
+		a.btn-primary 			{ margin-top: -20px; }
+
+		@media (max-width: $screen-sm-max)  { margin-top: 50px; }
+	}
+}
+
+/**
+ * MAP PAGE
+ */
+#map-page 						{ 
+	.wrapper > .container 		{ padding-bottom: 100px; }
+
+	#map-wrapper 				{ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); margin-top: -100px; 
+		#map-legend 			{ background-color: $white-back; padding: 30px; display: flex; text-align: center;
+			.map-pan,
+			.map-click 			{ width: 50%;
+				p 				{ margin: 0; font-weight: bold; }
+				i 				{ color: $red; font-size: 4.4rem; margin-right: 10px; vertical-align: middle;
+					-webkit-text-stroke: 1px white;
+				}
+			}
+
+			.map-pan 			{ border-right: 1px solid $light-gray; }
+			.map-click 			{  }
+
+			@media (max-width: $screen-sm-max)  { display: block; padding: 0;
+				.map-pan,
+				.map-click 			{ border: 0; width: 100%; padding: 15px;
+					p 				{ font-size: 1.5rem; font-weight: bold; }
+					i 				{ font-size: 3rem; }
+				}
+			}
+		}
+
+		#map 					{ width: 100%; padding-top: 70%;
+			#info-window 		{ max-width: 100%;
+				.img-wrap 		{ padding-right: 20px; }
+			}
+
+			@media (max-width: $screen-sm-max)  { padding-top: 100%;
+				#info-window 	{ 
+					.img-wrap 	{ padding-right: 0; padding-bottom: 10px; }
+					td 			{ float: left; clear: left; }
+				}
+			}
+		}
+	}
+}
+
+/**
+ * ARCHIVES
+ */
+body.blog,
+body.search,
+body.archive,
+body.category					{ 
+	.content 					{ margin-bottom: 30px; }
+
+	#filters 					{ margin-top: -30px;
+		form 					{ position: relative;
+			input 				{ border: 1px solid $upgrayddd; padding: 15px 20px 16px; width: 100%; line-height: 1; max-width: 90%; margin: 0 5%; }
+			i 					{ position: absolute; right: 10%; top: 20px; color: $gold; }
+
+			.pk-style 			{ max-width: 90%; margin: 0 5%;
+				select 			{  }
+			}
+
+			@media (max-width: $screen-lg-max)  { 
+				input,
+				.pk-style 			{ max-width: 90%; margin: 0 5%; }
+
+				i 					{ right: 12%; }
+			}
+			
+			@media (max-width: $screen-md-max)  { 
+				input,
+				.pk-style 			{ max-width: 90%; margin: 0 5%; }
+			}
+
+			@media (max-width: $screen-sm-max)  { 
+				input,
+				.pk-style 			{ max-width: 100%; margin: 0;  }
+
+				i 					{ right: 30px; }
+
+				input 				{  }
+				.pk-style 			{ margin-bottom: 20px; }
+			}
+		}
+	}
+
+	.article 					{ background-color: $white; border: 1px solid $light-gray; border-radius: 3px; height: 100%; padding: 20px; transition: box-shadow .2s;
+		&:hover 				{ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
+
+		&.first-article 		{ display: flex;
+			.article-img 		{ padding-top: 26%; width: 40%; margin: 0; }
+			.article-content 	{ padding: 70px 60px;
+				h3 				{ font-size: 4rem; }
+			}
+
+			@media (max-width: $screen-sm-max)  { display: block;
+				.article-img 	{ padding-top: 50%;  width: 100%; margin-bottom: 20px; }
+				.article-content 	{ padding: 0; }
+			}
+		}
+		
+		a 						{ text-decoration: none; }
+
+		.article-img 			{ background-color: $dark-blue; padding-top: 70%; width: 100%; margin-bottom: 20px;
+			&.is-default 		{ background-size: contain; border-left: 10px solid $dark-blue; border-right: 10px solid $dark-blue; height: 150px; padding: 0; }
+		}
+
+		.article-content 		{
+			h3 					{ color: $gold; font-size: 3rem; margin: 0; }
+			h6.date 			{ margin: 0;
+				span 			{ color: $red; }
+			}
+		}
+	}
+}
+
+/**
+ * SINGLE POST
+ */
+body.single						{
+
+	#featured 					{ padding-top: 65vh; height: 100vh;
+		.inside-shadow 			{ background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.8) 100%); box-shadow: inset 0px 0px 200px 100px rgba(0, 0, 0, 0.3); position: absolute; width: 100%; top: 0; bottom: 0; }
+		h1 						{ margin: 0; }
+		h6 						{ color: $white;
+			a 					{ color: $white; text-decoration: underline;
+				&.visited 		{ color: $white; }
+			}
+		}
+
+		.featured-title 		{ position: absolute; width: 100%; padding: 0 15px; left: 0; bottom: 250px; }
+
+		#map 					{ background-color: $white; background-position: top center; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); position: absolute; bottom: -50px; left: 50%; margin-left: -100px; width: 200px; height: 200px; border-radius: 50%; z-index: 11; }
+	}
+
+	#article 					{ padding-top: 30px; position: relative; }
+	#progress-background 		{ background: linear-gradient(to right, rgba(140,0,7,1) 0%,rgba(44,201,255,1) 100%); position: absolute; left: 0; top: 0; z-index: 10; width: 100%; height: 5px; }
+
+	#progress-reveal 			{ background-color: white; position: absolute; right: 0; top: 0; z-index: 10; width: 100%; height: 5px; }
+
+	.article-share 				{ border-bottom: 1px solid $light-gray; padding: 50px 0;
+		.tag-wrap,
+		.share-wrap 			{ display: inline-block; vertical-align: middle;
+			p.label 			{ display: inline-block; font-weight: bold; margin: 0; margin-right: 10px; vertical-align: middle; }
+			div 				{ display: inline-block; vertical-align: middle; }
+		}
+
+		.share-wrap 			{ padding-right: 50px; }
+		.tag-wrap 				{ 
+			.list-tags 			{
+				p 				{ margin: 0; }
+			}
+		}
+	}
+
+	.article-author 			{ padding: 50px 0;
+		img, h3 				{ display: inline-block; vertical-align: middle; margin: 0; }
+		img 					{ border-radius: 50%; width: 100px; height: 100px; margin-right: 30px; }
+		a.btn 					{ margin-left: 15px; width: 260px;
+			@media (max-width: $screen-sm-max)  { margin-left: 0; }
+		}
+	}
+
+	.article-comments 			{ 
+		h2 						{ text-align: center; }
+
+		ol 						{ padding: 0; }
+
+		.comment-list 			{
+			img.avatar 			{ width: 75px; height: 75px; margin-right: 15px; }
+
+			//target all comments
+			li.comment 			{ border: 1px solid $light-gray; list-style: none; padding: 20px;
+				table td 		{ vertical-align: top;} 
+
+				.comment-author { margin-bottom: 20px;
+					cite 		{ font-family: $header-font; color: $h2blue; font-size: 3rem; font-style: normal;
+						a 		{ color: $h2blue; text-decoration: none;}
+					}
+					span.says 	{ display: none; }
+					span.date 	{ display: block; font-size: 1.5rem; margin-top: -5px; }
+				}
+
+				.comment-reply-link { font-size: 1.5rem; font-weight: bold;
+					&:visited 	{ color: $red; }
+				}
+
+				.comment-awaiting-moderation { color: $red; display: block; }
+
+				/* User Edit Comment Form */
+				.sce-textarea 	{ 
+					textarea 	{ border: 1px solid $light-gray; resize: none; padding: 20px; }
+					button 		{ @extend .btn,.btn-primary; margin-right: 15px; }
+				}
+			}
+
+			//target specific comments
+			> li.comment 		{ background-color: $white-back;  margin-bottom: 50px;
+				.children 		{ 
+					li.comment 	{ background-color: $white;  }
+				}
+			}
+		}
+
+		/* Comment Form */
+		#respond 				{ 
+			input, textarea 	{ padding: 10px 20px; }
+			
+			.comment-input 		{ float: left; margin-right: 2%; margin-bottom: 30px; width: 32%; 
+				&.comment-form-url	{ margin-right: 0; }
+				input 			{ width: 100%; }
+
+				@media (max-width: $screen-sm-max)  { float: none; margin-right: 0; width: 100%; }
+			}
+
+			.comment-form-comment { clear: left; width: 100%;
+				textarea 		{ border: 1px solid $light-gray; resize: none; width: 100%; }
+			}
+
+			#submit 			{ @extend .btn,.btn-primary; }
+		}
+	}
+}
+
+
+

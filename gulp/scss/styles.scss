@@ -15,38 +15,38 @@
 * Allows for retina background images
 * https://github.com/xorcery/retinajs for syntax
 */
-@import "./powderkeg/common/retina";
+@import "./custom/common/retina";
 
 /**
  * Global styles that are probably enabled on most sites
  */
-@import "./powderkeg/global/pk-variables";
-@import "./powderkeg/global/mixin";
-@import "./powderkeg/global/helpers";
-@import "./powderkeg/global/gravity-forms";
-@import "./powderkeg/global/print";
-@import "./powderkeg/common/typography";
-@import "./powderkeg/common/buttons";
-@import "./powderkeg/common/forms";
+@import "./custom/global/pk-variables";
+@import "./custom/global/mixin";
+@import "./custom/global/helpers";
+@import "./custom/global/gravity-forms";
+@import "./custom/global/print";
+@import "./custom/common/typography";
+@import "./custom/common/buttons";
+@import "./custom/common/forms";
 
 /**
  * More personalized "Common" styles
  */
 /*
-@import "./powderkeg/common/wppagenavi";
+@import "./custom/common/wppagenavi";
 
-@import "./powderkeg/common/tables";
-@import "./powderkeg/common/carousel";
-@import "./powderkeg/common/slick-slider";
-@import "./powderkeg/common/events"; 
-@import "./powderkeg/common/modals";
-@import "./powderkeg/common/woocommerce"; 
+@import "./custom/common/tables";
+@import "./custom/common/carousel";
+@import "./custom/common/slick-slider";
+@import "./custom/common/events"; 
+@import "./custom/common/modals";
+@import "./custom/common/woocommerce"; 
 */
 
 /**
  * Site Specific. Will be very different between projects
  */
-@import "./powderkeg/site/sitewide";
-@import "./powderkeg/site/navigation";
-@import "./powderkeg/site/pages";
+@import "./custom/site/sitewide";
+@import "./custom/site/navigation";
+@import "./custom/site/pages";
 
